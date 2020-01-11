@@ -1,0 +1,222 @@
+/* Aligner àdroite les chiffres du tableau */
+td.aligneradroite {
+  text-align:right;
+}
+
+/* ------------------------------ */
+/* -- Body commun aux 2 @media -- */
+/* ------------------------------ */
+body{
+	font-family: "Trebuchet MS", helvetica, sans-serif;
+	font-size: 14px;
+	background-color: RGBa(123,104,238,0.3);
+	padding-left:2%;
+	padding-right:2%;
+}
+/* --------------------------------------- */
+/* -- Header du site commun au 2 @media -- */
+/* --------------------------------------- */
+#titre-principal-entete {
+	text-align: center;
+	margin: 15px 0px;
+	color:white;
+}
+/* --------------------------------------------- */
+/* -- Menu de naviguation commun aux 2 @media -- */
+/* --------------------------------------------- */
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: #370229;
+}
+li a{
+	display: block;
+	color: white;
+	text-align: center; /* N'est utile que pour la version smartphone */
+	padding: 5px 10px;
+	text-decoration: none;
+}
+ul li a:hover{
+	background-color: RGBa(123,104,238,0.5);
+	color:white;
+}
+/* --------------------- */
+/* -- Contenu du site -- */
+/* --------------------- */
+main{
+	background-color: white;
+	border: 2px solid #370229;	
+	/* Evite le bug ie sur la balise main */
+	display:block;
+}
+/* -- Section et son h1 -- */
+section {
+}
+h1{
+	color: #370229;
+	padding:10px 0px;
+	text-align:center;
+}
+/* -- Article et ses h2 et h3 -- */
+h2{
+	color: #370229;
+	font-size: 16px; /* N'est utile qu'au mode PC */
+	padding:15px 0px;
+}
+img{ 
+	display: block; 
+	margin: auto; 
+	padding: 0px 0px;
+}
+a{
+	color: red;
+}
+a:hover{
+	color: green;
+}
+/* ------------------------------------- */
+/* -- Mise en forme du call to action -- */
+/* ------------------------------------- */
+*.calltoaction {
+  background-color: #370229; 
+  color: white; 
+  border: 2px solid #370229;
+	position:fixed;
+	right:0px;
+	top:50%;
+	text-decoration:none;
+	margin-right:10px;
+	padding:5px 10px;
+	border-radius:10px;
+}
+*.calltoaction:hover {
+	border: 2px solid #370229;
+  background-color: #ADFF2F;
+  color: black;
+	box-shadow: 5px 5px 10px #555;
+}
+
+/* ---------------------------- */
+/* -- Mise en form du footer -- */
+/* ---------------------------- */
+footer{
+	text-align:center;
+	background-color:white;
+	color:black;
+}
+
+/* ------------------------------------------- */
+/* -- Mise en form du formulaire de contact -- */
+/* ------------------------------------------- */
+form{
+	margin:0px;
+	padding:0px;
+}
+fieldset{
+  margin-top:5px;
+}
+/* Mise en forme de l'affichage du login */*
+#affichagelogin{position:absolute; top:5px; right:2%;}
+/* Mise en forme du bouton connexion */
+#boutonconnexion{background:#ADFF2F; line-height:2em; padding-left:1em; padding-right:1em; border-radius:10px; display:inline; position:absolute; top:20px; right:2%;}
+#boutonconnexion:hover{cursor:pointer;font-weight:bold; box-shadow: 5px 5px 5px #555;}
+/* Mise en forme du bouton envoyer */
+#boutonsubmit{background:#ADFF2F; line-height:2em; padding-left:1em; padding-right:1em; border-radius:10px; display:inline;}
+#boutonsubmit:hover{cursor:pointer;font-weight:bold; box-shadow: 5px 5px 5px #555;}
+/* mise en page du formulaire */
+label {
+  display: inline-block;
+}
+*.coordonnee label
+{
+width:90px;
+}
+textarea{
+	width:97%;
+}
+
+/* --------------------------------- */
+/* -- CSS pour le mode smartphone -- */
+/* --------------------------------- */
+@media screen and (max-width: 600px) {
+	/* -- Header du site -- */
+	header{
+		flex-direction:row;
+	}
+	#titre-principal-entete {
+		font-size: 19px;
+		text-shadow: 5px 5px 10px #555;
+	}
+	/* -- Menu de naviguation : Masque l'affichage du sous menu -- */
+	nav ul li ul li{
+		display:none;
+	}
+	/* -- Menu de naviguation : Affiche le sous menu sur la largeur complète du smartphone -- */
+	nav ul li:hover ul li{
+		display:block;
+	}
+	h1{
+		font-size: 16px;
+	}
+	/* --  -- */
+	section{
+		padding: 10px 5% ;
+	}
+	img{
+		width:100%;
+		height:auto;
+		display:block;
+	}
+	img#cofrac{
+		width:50%;
+		height:auto;
+		display:block;
+	}
+	*.decalagesmart {
+		text-align:left;
+		padding:6px 0px;
+		margin:0px 0px;
+		text-align:justify;
+	}
+	a.calltoaction{
+		transform:rotate(-30deg);
+	}
+}
+
+@media screen and (min-width: 601px) {
+	/* -- Définition de la largeur du body et centrage -- */
+	body {
+		width: auto;
+		margin: auto;
+	}
+	/* -- header du site -- */
+	#titre-principal-entete {
+		font-size: 32px;
+		text-shadow: 10px 10px 20px #555;		
+	}
+	/* -- Menu de naviguation -- */
+	.masquermenu{
+		display:none;
+	}
+	ul{
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+	}
+	/* -- Contenu -- */
+	main{
+	}
+	section{
+		padding: 0px 2% ;
+	}
+	h1{
+		font-size: 18px;
+	}
+	article{
+		padding: 0px 5% ;
+		border: 2px solid RGBa(123,104,238,0.3);		
+	}
+}
+
+
